@@ -1,7 +1,10 @@
+# TAW - projekt zaliczeniowy
+
 Warunkiem zaliczenia jest przygotowanie aplikacji serwerowej opartej o REST API oraz raportu komunikacji z tym serwerem według podanego scenariusza.
 Raport komunikacji z serwerem powinien zawierać zestawienie wywołanych żądań do serwera wraz z adresem zasobu, metodą http, body żądania, nagłówkami żądania oraz odpowiedzią serwera na wysłane żądanie w postaci kodu odpowiedzi http oraz body odpowiedzi.
 
 Przykładowy opis żądania z ćwiczeń:
+```
 Metoda: POST
 Adres zasobu: http://localhost:8080/api/activities
 Nagłówki: Content-Type: application/json
@@ -13,6 +16,7 @@ Request Body:
 Odpowiedź:
 HTTP Code: 200 OK
 Body: brak
+```
 
 W ramach projektu należy przygotować REST API bazujące na zasobie przedmiotów na studia. Każdy przedmiot na studia powinien zawierać informacje o:
 - nazwie przedmiotu,

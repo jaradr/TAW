@@ -48,7 +48,7 @@ Scenariusz do raportu:
 10. Usunięcie wszystkich przedmiotów,
 11. Pobranie wszystkich przedmiotów.
 
-## AD1.
+## AD1. Wprowadzenie przedmiotów do systemu w podanej kolejności
 ```
 Metoda: POST
 Adres zasobu: http://localhost:8081/api/subjects
@@ -135,7 +135,7 @@ HTTP Code: 200 OK
 Body: brak
 ```
 
-## AD2.
+## AD2. Pobranie wszystkich przedmiotów
 ```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects
@@ -190,7 +190,8 @@ Body:
 ]
 ```
 
-## AD3.
+## AD3. Pobranie przedmiotów, które mają egzamin
+```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects?Egzamin=tak
 Nagłówki: Content-Type: application/json
@@ -214,8 +215,9 @@ Body:
         "Egzamin": "tak"
     }
 ]
+```
 
-## AD4.
+## AD4. Pobranie przedmiotów, które odbywają się w sali 216
 ```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects?Sala=216
@@ -249,7 +251,7 @@ Body:
 ]
 ```
 
-## AD5.
+## AD5. Pobranie przedmiotów które nie mają egzaminu i odbywają się w sali 208
 ```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects?Egzamin=tak&Sala=208
@@ -269,7 +271,7 @@ Body:
 ]
 ```
 
-## AD6.
+## AD6. Pobranie przedmiotu o identyfikatorze 3
 ```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects/3
@@ -287,7 +289,7 @@ Body:
 }
 ```
 
-## AD7.
+## AD7. Pobranie przedmiotu o identyfikatorze 15
 ```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects/15
@@ -298,7 +300,7 @@ HTTP Code: 404 Not Found
 Body: brak
 ```
 
-## AD8.
+## AD8. Usunięcie przedmiotu o identyfikatorze 2
 ```
 Metoda: DELETE
 Adres zasobu: http://localhost:8081/api/subjects/2
@@ -309,7 +311,7 @@ HTTP Code: 204 No Content
 Body: brak
 ```
 
-## AD9.
+## AD9. Pobranie wszystkich przedmiotów
 ```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects
@@ -357,7 +359,7 @@ Body:
 ]
 ```
 
-## AD10.
+## AD10. Usunięcie wszystkich przedmiotów
 ```
 Metoda: DELETE
 Adres zasobu: http://localhost:8081/api/subjects
@@ -368,7 +370,7 @@ HTTP Code: 200 OK
 Body: brak
 ```
 
-## AD11.
+## AD11. Pobranie wszystkich przedmiotów
 ```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects

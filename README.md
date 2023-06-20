@@ -1,5 +1,6 @@
 # TAW - projekt zaliczeniowy
 
+## Opis projektu 
 Warunkiem zaliczenia jest przygotowanie aplikacji serwerowej opartej o REST API oraz raportu komunikacji z tym serwerem według podanego scenariusza.
 Raport komunikacji z serwerem powinien zawierać zestawienie wywołanych żądań do serwera wraz z adresem zasobu, metodą http, body żądania, nagłówkami żądania oraz odpowiedzią serwera na wysłane żądanie w postaci kodu odpowiedzi http oraz body odpowiedzi.
 
@@ -46,12 +47,9 @@ Scenariusz do raportu:
 9. Pobranie wszystkich przedmiotów,
 10. Usunięcie wszystkich przedmiotów,
 11. Pobranie wszystkich przedmiotów.
-Projekt należy umieścić w dedykowanym repozytorium na https://github.com, a raport z testów umieścić w pliku readme wewnątrz projektu. Link do repozytorium proszę przesyłać na maila mat.wydmanski@gmail.com z tagiem [tawagh] w tytule wiadomości. 
 
-Na początku kolejnych zajęć pokażę krok po kroku jak wykorzystując dockera uruchomić stworzony na zajęciach projekt w Google Cloud. Następnie będzie czas na pracę własną w tym zakresie oraz na zadawanie pytań dotyczących projektów zaliczeniowych.
-Pokażę także jak korzystać z gita, aby nie było problemów z dostarczeniem projektów zaliczeniowych."
-
-AD1.
+## AD1.
+```
 Metoda: POST
 Adres zasobu: http://localhost:8081/api/subjects
 Nagłówki: Content-Type: application/json
@@ -135,8 +133,10 @@ Request Body:
 Odpowiedź:
 HTTP Code: 200 OK
 Body: brak
+```
 
-AD2.
+## AD2.
+```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects
 Nagłówki: Content-Type: application/json
@@ -188,8 +188,9 @@ Body:
         "Egzamin": "tak"
     }
 ]
+```
 
-AD3.
+## AD3.
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects?Egzamin=tak
 Nagłówki: Content-Type: application/json
@@ -214,7 +215,8 @@ Body:
     }
 ]
 
-AD4.
+## AD4.
+```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects?Sala=216
 Nagłówki: Content-Type: application/json
@@ -245,8 +247,10 @@ Body:
         "Egzamin": "nie"
     }
 ]
+```
 
-AD5.
+## AD5.
+```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects?Egzamin=tak&Sala=208
 Nagłówki: Content-Type: application/json
@@ -263,8 +267,10 @@ Body:
         "Egzamin": "tak"
     }
 ]
+```
 
-AD6.
+## AD6.
+```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects/3
 Nagłówki: Content-Type: application/json
@@ -279,8 +285,10 @@ Body:
     "Sala": 208,
     "Egzamin": "nie"
 }
+```
 
-AD7.
+## AD7.
+```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects/15
 Nagłówki: Content-Type: application/json
@@ -288,8 +296,10 @@ Request Body: brak
 Odpowiedź:
 HTTP Code: 404 Not Found
 Body: brak
+```
 
-AD8.
+## AD8.
+```
 Metoda: DELETE
 Adres zasobu: http://localhost:8081/api/subjects/2
 Nagłówki: Content-Type: application/json
@@ -297,8 +307,10 @@ Request Body: brak
 Odpowiedź:
 HTTP Code: 204 No Content
 Body: brak
+```
 
-AD9.
+## AD9.
+```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects
 Nagłówki: Content-Type: application/json
@@ -343,8 +355,10 @@ Body:
         "Egzamin": "tak"
     }
 ]
+```
 
-AD10.
+## AD10.
+```
 Metoda: DELETE
 Adres zasobu: http://localhost:8081/api/subjects
 Nagłówki: Content-Type: application/json
@@ -352,8 +366,10 @@ Request Body: brak
 Odpowiedź:
 HTTP Code: 200 OK
 Body: brak
+```
 
-AD11.
+## AD11.
+```
 Metoda: GET
 Adres zasobu: http://localhost:8081/api/subjects
 Nagłówki: Content-Type: application/json
@@ -361,3 +377,4 @@ Request Body: brak
 Odpowiedź:
 HTTP Code: 200 OK
 Body: []
+```
